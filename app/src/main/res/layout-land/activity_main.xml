@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/relative1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleMapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="MAPA"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleMapa"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Busca las cordenadas"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/buttonConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleMapa"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_buscador" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative2"
+        android:layout_width="481dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@+id/relative1"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/titleLAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:text="LATITUD"
+            android:textSize="20dp"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/editTextLAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleLAT"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:ems="15"
+            android:hint="Introduce la latitud"
+            android:inputType="phone"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/titleLON"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextLAT"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="LONGITUD"
+            android:textSize="20dp"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/editTextLON"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:hint="Introduce la longitud"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:inputType="phone"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonToSecondActivity"
+        android:layout_width="480dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/relative1"
+        android:background="@color/colorAccent"
+        android:text="ACEPTAR"
+        android:textColor="@color/colorPrimaryLight"
+        android:visibility="invisible" />
+
+</RelativeLayout>
